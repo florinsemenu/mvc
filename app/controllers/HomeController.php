@@ -1,13 +1,15 @@
 <?php
+namespace App\Controllers;
 
 class HomeController
 {
-    public function _construct()
+    public function __construct()
     {
-        echo "HomeController<br>";
+        // echo "HomeController<br>";
     }
     public function index()
     {
-        echo "en el metodo index";
+        // echo "home->index";
+        include('../views/home.php');
     }
 }

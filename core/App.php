@@ -1,32 +1,35 @@
 <?php
+namespace Core;
 
-class App  
+class App
 {
-    public function _construct()
+    public function __construct()
     {
-        //echo"Construyo el app";
+        // echo "construyo App<br>";
 
         if (isset($_GET['url'])) {
             $url = $_GET['url'];
         } else {
             $url = 'home';
         }
-       
 
-        $arguments = explode('/', trim($url, '/'));
+        $arguments = explode('/', trim($url, '/')); 
         // echo $url;
-        // echo "<hr>";
-
-       // print_r($arguments);
+        // echo "<hr>";       
+        
+        
+        // print_r($arguments);
         // echo "<hr>";
         $controllerName = array_shift($arguments);
-        //print_r($arguments);
+        // print_r($arguments);
         // echo "<hr>";
-        $controllerName = ucwords($controllerName) . "Controller";
-        
+        $controllerName = ucwords($controllerName) . "Controller";        
 
         if (count($arguments)) {
             $method =  array_shift($arguments);
+            // print_r($arguments);
+            // echo "<hr>";
+    
         } else {
             $method = "index";
         }
@@ -38,7 +41,9 @@ class App
             header("HTTP/1.0 404 Not Found");
             echo "No encontrado";
             die();
-        }
+        }    
+        
+        $controllerName = "\App\Controllers\\$controllerName";
 
         $controllerObject = new $controllerName;
         if (method_exists($controllerName, $method)) {
@@ -48,15 +53,13 @@ class App
             echo "No encontrado";
             die();
         }
-
-        // /*echo $url . "<br>";
+        
+        
+        // echo $url . "<br>";
         // echo $controllerName . "<br>";
         // echo $method . "<br>";
         // echo "<pre>";
-        //var_dump($arguments);
-
-
+        // var_dump($arguments);
 
     }
-    
 }

@@ -1,25 +1,27 @@
 <?php
-class UserController{
-    public function _contruct()
-    {   
-        echo"User controler constructor creado";
+namespace App\Controllers;
+
+class UserController  
+{
+    public function __construct()
+    {
+        echo "en UserController<br>";
     }
+
     public function index()
     {
-        echo "en el metodo index";
+        echo "En método index<br>";
     }
+    
     public function show($arguments)
     {
-        
         $id = $arguments[0];
-        echo "mostrar el usuario" . $id;
-
+        echo "Mostrar el usuario $id";        
     }
+    
     public function delete($arguments)
     {
-        
         $id = $arguments[0];
-        echo "borrar el usuario" . $id;
-
+        echo "Borrar el usuario $id";        
     }
 }

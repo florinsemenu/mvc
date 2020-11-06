@@ -8,8 +8,8 @@
 <body>
     <h1>Detalle de usuario</h1>
     <ul>
-        <li>Usuario número <?= $user[0]?></li>
-        <li>Nombre: <?= $user[1]?></li>
+        <li>Usuario número: <?= $user[0] ?></li>
+        <li>Nombre: <?= $user[1] ?></li>
     </ul>
 </body>
 </html>

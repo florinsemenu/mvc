@@ -1,12 +1,14 @@
 <?php
+namespace App\Controllers;
+
 class ProductController  
 {
-    public function _construct()
+    public function __construct()
     {
-        echo "constructor de productController";
+        echo "en ProductController<br>";
     }
     public function index()
     {
-        echo "en el metodo index";
+        echo "En método index<br>";
     }
 }
