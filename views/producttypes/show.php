@@ -6,10 +6,10 @@
     <title>MVC</title>
 </head>
 <body>
-    <h1>Detalle de producto <?= $product->id ?></h1>
+    <h1>Detalle del producto <?= $producttype->id ?></h1>
     <ul>
         <li>
-            Producto: <?= $product->name ?>
+            Producto: <?= $producttype->name ?>
         </li>
     </ul>
 </body>

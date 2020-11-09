@@ -8,14 +8,14 @@ class ProductTypeController
 {
     public function __construct()
     {
-        echo "en ProductTypeController<br>";
+        //echo "en ProductTypeController<br>";
     }
 
     public function index()
     {
-        echo "En método index algo más<br>";
+        //echo "En método index algo más<br>";
         //buscar la lista de productos
-        $products = ProductType::all(); //arriba pongo use ...        
+        $producttypes = ProductType::all(); //arriba pongo use ...        
         //generar la vista
         include('../views/producttypes/index.php');
     }
@@ -24,7 +24,7 @@ class ProductTypeController
     {
         $id = $arguments[0];
         echo "Mostrar el producto $id";        
-        $products = ProductType::find($id);
+        $producttype = ProductType::find($id);
         //generar la vista
         include('../views/producttypes/show.php');
     }

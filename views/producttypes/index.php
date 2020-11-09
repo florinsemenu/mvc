@@ -17,10 +17,10 @@
 
 
         <tbody>
-            <?php foreach ($products as $product) { ?>
+            <?php foreach ($producttypes as $product) { ?>
                 <tr>
                     <td><?= $product->name ?></td>
-                    <td><a href="/producttypes/show/<?= $product->id ?>">  Ver </a></td>
+                    <td><a href="/ProductType/show/<?= $product->id ?>">  Ver </a></td>
                 </tr>
             <?php } ?>
         </tbody>
