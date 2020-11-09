@@ -24,11 +24,14 @@ class ProductTypeController
     {
         $id = $arguments[0];
         echo "Mostrar el producto $id";        
+        $products = ProductType::find($id);
+        //generar la vista
+        include('../views/producttypes/show.php');
     }
     
     public function delete($arguments)
     {
         $id = $arguments[0];
-        echo "Borrar el usuario $id";        
+        echo "Borrar el producto $id";        
     }
 }

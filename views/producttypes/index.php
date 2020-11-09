@@ -20,6 +20,7 @@
             <?php foreach ($products as $product) { ?>
                 <tr>
                     <td><?= $product->name ?></td>
+                    <td><a href="/producttypes/show/<?= $product->id ?>">  Ver </a></td>
                 </tr>
             <?php } ?>
         </tbody>

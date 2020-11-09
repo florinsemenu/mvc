@@ -14,11 +14,23 @@ class ProductType
 
     public static function all()
     {
+        
+        
         $db = ProductType::db();
         $statement = $db->query('SELECT * FROM product_types');
         $products = $statement->fetchAll(PDO::FETCH_CLASS, ProductType::class);
         return $products;
-        exit("w");
+    }
+
+    public static function find($id)
+    {
+        $db = ProductType::db();
+
+        $statement = $db->prepare('SELECT * FROM product_types WHERE id=:id');
+        $statement->execute(array(':id' => $id));        
+        $statement->setFetchMode(PDO::FETCH_CLASS, ProductType::class);
+        $products = $statement->fetch(PDO::FETCH_CLASS);
+        return $products;
     }
 
     protected static function db()
