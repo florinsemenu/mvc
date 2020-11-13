@@ -45,4 +45,3 @@ class User
         return $db;
     }
 }
-

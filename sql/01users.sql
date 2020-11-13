@@ -17,10 +17,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `birthdate`, `admin`) VALUES
 (1, 'Pepe', 'Navarro', 'admin@penya.com', '2001-4-1', 1),
-(2, 'Ana', 'Garcí­a', 'anagarcia@penya.com', '2001-4-1', 1),
-(3, 'Juan', 'Sánchez', 'juan@penya.com', '2001-2-17', 0),
-(4, 'Antonio', 'López', 'antonio@penya.com', '2001-8-18', 0),
-(5, 'Marisa', 'Gonzáliz', 'marisa@penya.com', '2001-1-14', 0),
-(6, 'Toni', 'López', 'toni@penya.com', '2001-8-18', 0),
+(2, 'Ana', 'GarcÃ­Â­a', 'anagarcia@penya.com', '2001-4-1', 1),
+(3, 'Juan', 'SÃ¡nchez', 'juan@penya.com', '2001-2-17', 0),
+(4, 'Antonio', 'LÃ³pez', 'antonio@penya.com', '2001-8-18', 0),
+(5, 'Marisa', 'GonzÃ¡liz', 'marisa@penya.com', '2001-1-14', 0),
+(6, 'Toni', 'LÃ³pez', 'toni@penya.com', '2001-8-18', 0),
 (7, 'Nacho', 'Villa', 'nacho@penya.com', '2001-8-18', 0)
 ;

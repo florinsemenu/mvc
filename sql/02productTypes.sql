@@ -12,7 +12,7 @@ INSERT INTO `product_types` (`id`, `name`) VALUES
 (1, 'cervezas'),
 (2, 'refrescos'),
 (3, 'licores'),
-(4, 'caf�s'),
+(4, 'cafï¿½s'),
 (5, 'combinados'),
 (6, 'tapas'),
 (7, 'bocadillos')
